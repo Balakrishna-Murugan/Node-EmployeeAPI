@@ -18,7 +18,7 @@ app.use(express.json());
 //const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
 const MONGODB_URI = process.env.MONGODB_URI;
 // Connect to MongoDB
-console.log(MONGODB_URI);
+//console.log(MONGODB_URI);
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
