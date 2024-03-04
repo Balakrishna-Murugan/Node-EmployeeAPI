@@ -1,20 +1,24 @@
 // server.js
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config();
 //const path = require('path');
 //const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 5002;
+const PORT = process.env.PORT || 5006;
 
 // Middleware
 //app.use(cors());
 app.use(express.json());
 
 // MongoDB Atlas connection string
-const MONGODB_URI = 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
-
+//const MONGODB_URI = 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
+// Use environment variables for MongoDB connection
+//const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
+const MONGODB_URI = process.env.MONGODB_URI;
 // Connect to MongoDB
+console.log(MONGODB_URI);
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
