@@ -12,7 +12,9 @@ const PORT = process.env.PORT || 5002;
 app.use(express.json());
 
 // MongoDB Atlas connection string
-const MONGODB_URI = 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
+//const MONGODB_URI = 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
+// Use environment variables for MongoDB connection
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/your-database';
 
 // Connect to MongoDB
 mongoose.connect(MONGODB_URI, {
