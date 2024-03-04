@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5006;
 app.use(express.json());
 
 // MongoDB Atlas connection string
-const MONGODB_URI = 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
+//const MONGODB_URI = 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
 // Use environment variables for MongoDB connection
 //const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://RootUser:Root@cluster0.rvecbsg.mongodb.net/Cricket';
 const MONGODB_URI = process.env.MONGODB_URI;
