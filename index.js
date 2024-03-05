@@ -3,13 +3,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 //const path = require('path');
-//const cors = require('cors');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5006;
 
 // Middleware
-//app.use(cors());
+app.use(cors());
 app.use(express.json());
 
 // MongoDB Atlas connection string
